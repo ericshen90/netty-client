@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_package = "com.eric.netty.protocol.protobuf";
+option java_outer_classname = "CommandType";
+
+enum Command {
+
+  AUTH = 0; //验证请求
+  AUTH_SUCCESS = 1; //验证成功
+  AUTH_FAIL = 2; //验证失败
+
+  PING = 10; //客户端心跳消息
+  PONG = 11; //服务端心跳消息
+
+  SYS_CONFIG = 100; //系统配置
+  PATCH_UPDATE = 101; //更新补丁
+
+  HIGH_PHOTO = 201; //高拍仪
+  ID_CARD = 202; //身份证读取
+  SIGNATURE = 203; //签名板
+  BUSINESS_PRINTER = 204; //业务打印
+  QUEUE_PRINTER = 205;//叫号机打印
+  FACE_REC = 206; //人脸识别
+  FINGERPRINT = 207; //指纹
+
+}

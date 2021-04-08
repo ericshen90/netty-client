@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "com.eric.netty.protocol.protobuf";
+option java_outer_classname = "ResultBase";
+
+message Result {
+  bytes file = 1;
+  string shaValue = 2;
+}
