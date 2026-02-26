@@ -8,6 +8,7 @@ import com.eric.netty.protocol.protobuf.MessageBase;
 import com.eric.netty.protocol.protobuf.ResultBase;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.UUID;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +24,11 @@ public class ConsumerController {
 
     @GetMapping("/send")
     public String send() throws IOException {
-        File file = new File("C:\\Users\\ahsbt\\Desktop\\20140106170547843.png");
+        // Create a dummy file for demonstration if it doesn't exist
+        File file = new File("demo_file.png");
+        if (!file.exists()) {
+            Files.write(file.toPath(), "fake image data".getBytes());
+        }
 
         MessageBase.Message message = MessageBase.Message.newBuilder().setCmd(Command.HIGH_PHOTO)
             .setMsg("hello server").setRequestId(UUID.randomUUID().toString()).setData(Any.pack(

@@ -3,6 +3,8 @@ package com.eric.netty;
 import com.eric.netty.client.NettyClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
 /**
  * 启动类
  *
@@ -13,8 +15,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class NettyApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(NettyApplication.class, args);
-        NettyClient nettyClient = new NettyClient();
+        ConfigurableApplicationContext context = SpringApplication.run(NettyApplication.class, args);
+        NettyClient nettyClient = context.getBean(NettyClient.class);
         nettyClient.run();
     }
 }
