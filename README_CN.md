@@ -29,10 +29,10 @@
 - **通用消息封装**: 使用 `google.protobuf.Any` 实现灵活的通信协议。
 
 ## 🛠 技术栈
-- **Java**: 1.8
-- **Spring Boot**: 2.0.6.RELEASE
-- **Netty**: 4.1.38.Final
-- **Google Protobuf**: 3.9.0
+- **Java**: 21
+- **Spring Boot**: 3.3.0
+- **Netty**: 4.1.110.Final
+- **Google Protobuf**: 3.25.3
 - **Lombok**: 简化样板代码。
 
 ## 📂 项目结构
@@ -55,7 +55,7 @@ src/main/java/com/eric/netty/
 ## 🚀 快速开始
 
 ### 前置条件
-- JDK 1.8+
+- JDK 21+
 - Maven 3.x
 - 运行中的 Netty 服务端（默认地址 `127.0.0.1:9999`）
 
@@ -103,7 +103,7 @@ TCP 连接成功后，`AuthHandler` 立即发送 `AUTH` 命令。
 ```bash
 curl http://localhost:7777/send
 ```
-> **注意**: `/send` 接口目前尝试从硬编码的路径读取文件。在运行此测试之前，请更新 `ConsumerController.java` 中的本地路径为有效路径。
+> **注意**: `/send` 接口使用演示用的虚拟文件触发消息发送。
 
 ## 📚 参考资料
 - [Netty 官方文档](https://netty.io/)

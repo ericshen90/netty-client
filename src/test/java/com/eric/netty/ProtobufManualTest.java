@@ -9,7 +9,7 @@ import org.apache.commons.io.FileUtils;
  * @author EricShen
  * @date 2019-08-02
  */
-public class Test {
+public class ProtobufManualTest {
 
   public static void main(String[] args) throws IOException {
     // byte[] bytes = Files

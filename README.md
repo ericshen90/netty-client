@@ -29,10 +29,10 @@ A Netty-based client implementation integrated with Spring Boot, featuring Googl
 - **Generic Message Wrapper**: Flexible communication protocol using `google.protobuf.Any`.
 
 ## 🛠 Technology Stack
-- **Java**: 1.8
-- **Spring Boot**: 2.0.6.RELEASE
-- **Netty**: 4.1.38.Final
-- **Google Protobuf**: 3.9.0
+- **Java**: 21
+- **Spring Boot**: 3.3.0
+- **Netty**: 4.1.110.Final
+- **Google Protobuf**: 3.25.3
 - **Lombok**: Simplifies boilerplate code.
 
 ## 📂 Project Structure
@@ -55,7 +55,7 @@ src/main/java/com/eric/netty/
 ## 🚀 Quick Start
 
 ### Prerequisites
-- JDK 1.8+
+- JDK 21+
 - Maven 3.x
 - A running Netty Server (Expected at `127.0.0.1:9999`)
 
@@ -103,7 +103,7 @@ A `ConsumerController` is provided to trigger message sending via HTTP:
 ```bash
 curl http://localhost:7777/send
 ```
-> **Note**: The `/send` endpoint currently attempts to read a file from a hardcoded path. Please update `ConsumerController.java` with a valid local path before running this test.
+> **Note**: The `/send` endpoint triggers a message send using a dummy file for demonstration purposes.
 
 ## 📚 Reference
 - [Netty Documentation](https://netty.io/)
