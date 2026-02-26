@@ -1,3 +1,5 @@
+[中文版](./README_CN.md)
+
 # Netty-Client-Demo
 
 A Netty-based client implementation integrated with Spring Boot, featuring Google Protobuf serialization, heartbeat mechanism, automatic reconnection, and authentication.
